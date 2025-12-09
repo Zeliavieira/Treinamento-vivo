@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PASSO A PASSO — NEXT (Material)</title>
+  <style>
+    :root{--bg:#f6f7fb;--card:#ffffff;--accent:#0b6f6b;--muted:#677182;--glass:rgba(11,111,107,0.06)}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:linear-gradient(180deg,var(--bg),#eef3f8); color:#13202b}
+    .container{max-width:1100px;margin:36px auto;padding:24px}
+    header{display:flex;align-items:center;gap:16px}
+    .logo{width:64px;height:64px;border-radius:8px;background:var(--accent);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    h1{font-size:20px;margin:0}
+    p.lead{margin:6px 0 18px;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:1fr;gap:18px}
+    @media(min-width:920px){.grid{grid-template-columns:1fr 340px}}
+
+    /* card */
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(16,24,40,0.06);border:1px solid rgba(16,24,40,0.04)}
+    .procedure{display:grid;grid-template-columns:1fr;gap:12px}
+    .proc-header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .proc-title{font-weight:700}
+    .img-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+    @media(max-width:600px){.img-grid{grid-template-columns:repeat(2,1fr)}}
+    .img-placeholder{background:var(--glass);border-radius:8px;padding:10px;min-height:84px;display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px dashed rgba(11,111,107,0.14)}
+    .img-placeholder img{max-width:100%;max-height:120px;border-radius:6px}
+    .caption{font-size:13px;color:var(--muted);margin-top:6px}
+
+    .steps{background:linear-gradient(180deg,#fff, #fbfeff);padding:12px;border-radius:8px;border:1px solid rgba(11,111,107,0.04)}
+    .steps ol{margin:6px 0;padding-left:18px;color:#0f1724}
+    .meta{font-size:13px;color:var(--muted)}
+
+    footer{margin-top:18px;color:var(--muted);font-size:13px}
+
+    .download-row{display:flex;gap:8px;flex-wrap:wrap}
+    .btn{background:var(--accent);color:white;padding:10px 12px;border-radius:8px;text-decoration:none;font-weight:600}
+    .btn--ghost{background:transparent;border:1px solid rgba(11,111,107,0.14);color:var(--accent)}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">NEXT</div>
+      <div>
+        <h1>Passo a passo — Principais procedimentos (NEXT)</h1>
+        <p class="lead">Material em HTML com textos das etapas e espaços para imagens. As imagens já possuem os passos embutidos — aqui você tem o texto pronto para acessibilidade e impressão.</p>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section class="card">
+        <div class="procedure">
+
+          <!-- ENCONTRAR CADASTRO -->
+          <div>
+            <div class="proc-header">
+              <div>
+                <div class="proc-title">ENCONTRAR CADASTRO NO SALES — <span class="meta">6 imagens</span></div>
+                <div class="meta">Objetivo: localizar o cadastro do cliente no módulo Sales.</div>
+              </div>
+            </div>
+
+            <div class="img-grid" aria-hidden="false">
+              <div class="img-placeholder"><img src="imagens/1.jpeg" alt="Tela inicial do módulo Sales com campo de busca"><div class="caption">Acesse o módulo Sales e use o campo de busca.</div></div>
+              <div class="img-placeholder"><img src="imagens/2.jpeg" alt="Inserindo critérios de busca"><div class="caption">Digite nome/CPF/ID e clique em Buscar.</div></div>
+              <div class="img-placeholder"><img src="imagens/3.jpeg" alt="Resultados da busca"><div class="caption">Selecione o cadastro na lista de resultados.</div></div>
+              <div class="img-placeholder"><img src="imagens/6.jpeg" alt="Abrindo o cadastro"><div class="caption">Visualize os dados do cliente.</div></div>
+              <div class="img-placeholder"><img src="imagens/5.jpeg" alt="Aba financeira do cadastro"><div class="caption">Acesse a aba financeira para faturas.</div></div>
+              <div class="img-placeholder"><img src="imagens/4.jpeg" alt="Menu de ações no cadastro"><div class="caption">Use o menu de ações para operações rápidas.</div></div>
+            </div>
+
+            <div class="steps" style="margin-top:12px">
+              <strong>Passo a passo (texto):</strong>
+              <ol>
+                <li>Acesse o módulo <em>Sales</em> no NEXT.</li>
+                <li>No campo de busca, digite nome, CPF ou ID do cliente e clique em <strong>Buscar</strong>.</li>
+                <li>Na lista de resultados, localize e selecione o cadastro desejado.</li>
+                <li>Abra o cadastro para visualizar informações básicas (contato, status).</li>
+                <li>Vá para a aba <strong>Financeiro</strong> para consultar faturas.</li>
+                <li>Utilize o menu de ações para editar ou acessar funcionalidades financeiras.</li>
+              </ol>
+            </div>
+          </div>
+
+          <!-- INFORME DE PAGAMENTO -->
+          <hr style="margin:16px 0;border:none;border-top:1px solid #eef4f7">
+          <div>
+            <div class="proc-header">
+              <div>
+                <div class="proc-title">INFORME DE PAGAMENTO — <span class="meta">3 imagens</span></div>
+                <div class="meta">Fluxo: Itens de Fatura → Buscar Agora → Duplo clique em Conta Financeira → Lista de Faturas → Buscar Agora → Seleciona conta → Informe de Pagamento</div>
+              </div>
+            </div>
+
+            <div class="img-grid">
+              <div class="img-placeholder"><img src="imagens/7.jpeg" alt="Itens de fatura com botão Buscar Agora"><div class="caption">Abra Itens de Fatura e clique em 'Buscar Agora'.</div></div>
+              <div class="img-placeholder"><img src="imagens/8.jpeg" alt="Lista de faturas após duplo clique"><div class="caption">Dê duplo clique na conta financeira para abrir a lista de faturas.</div></div>
+              <div class="img-placeholder"><img src="imagens/9.jpeg" alt="Selecionar fatura e Informe de Pagamento"><div class="caption">Selecione a fatura e clique em 'Informe de Pagamento'.</div></div>
+            </div>
+
+            <div class="steps">
+              <strong>Passo a passo (texto):</strong>
+              <ol>
+                <li>Acesse <strong>Itens de Fatura</strong> e clique em <strong>Buscar Agora</strong>.</li>
+                <li>Dê duplo clique na conta financeira desejada para abrir a lista de faturas.</li>
+                <li>Selecione a fatura e clique em <strong>Informe de Pagamento</strong> para gerar o comprovante.</li>
+              </ol>
+            </div>
+          </div>
+
+          <!-- 2ª VIA DE CONTA -->
+          <hr style="margin:16px 0;border:none;border-top:1px solid #eef4f7">
+          <div>
+            <div class="proc-header">
+              <div>
+                <div class="proc-title">2ª VIA DE CONTA (E-MAIL / SMS) — <span class="meta">5 imagens</span></div>
+                <div class="meta">Fluxo: Itens de Fatura → Buscar Agora → Duplo clique em Conta Financeira → Lista de Faturas → Reenviar Fatura</div>
+              </div>
+            </div>
+
+            <div class="img-grid">
+              <div class="img-placeholder"><img src="imagens/10.jpeg" alt="Itens de fatura e Buscar Agora"><div class="caption">Inicie em Itens de Fatura e clique em 'Buscar Agora'.</div></div>
+              <div class="img-placeholder"><img src="imagens/11.jpeg" alt="Abrir conta financeira"><div class="caption">Abra a conta financeira com duplo clique.</div></div>
+              <div class="img-placeholder"><img src="imagens/12.jpeg" alt="Selecionar fatura e Reenviar"><div class="caption">Selecione a fatura e clique em 'Reenviar Fatura'.</div></div>
+              <div class="img-placeholder"><img src="imagens/13.jpeg" alt="Escolher forma de envio"><div class="caption">Escolha entre e-mail ou SMS e confirme o contato.</div></div>
+              <div class="img-placeholder"><img src="imagens/14.jpeg" alt="Confirmação de reenvio"><div class="caption">Confirmação de sucesso no reenvio da fatura.</div></div>
+            </div>
+
+            <div class="steps">
+              <strong>Passo a passo (texto):</strong>
+              <ol>
+                <li>Acesse <strong>Itens de Fatura</strong> e clique em <strong>Buscar Agora</strong>.</li>
+                <li>Dê duplo clique na conta financeira para acessar a lista de faturas.</li>
+                <li>Selecione a fatura desejada e escolha <strong>Reenviar Fatura</strong>.</li>
+                <li>Escolha o método (e-mail ou SMS) e confirme o contato com o cliente.</li>
+                <li>Clique em <strong>Reenviar</strong> e verifique a mensagem de confirmação.</li>
+              </ol>
+            </div>
+          </div>
+
+          <!-- DEBITO AUTOMATICO -->
+          <hr style="margin:16px 0;border:none;border-top:1px solid #eef4f7">
+          <div>
+            <div class="proc-header">
+              <div>
+                <div class="proc-title">ALTERAR FORMA DE PAGAMENTO → DÉBITO AUTOMÁTICO — <span class="meta">8 imagens</span></div>
+                <div class="meta">Fluxo resumido: Itens de Fatura → Conta Pós Paga → Consulta de Faturas → Meios de Pagamento → Criar → Selecionar Banco → Preencher Dados → Salvar</div>
+              </div>
+            </div>
+
+            <div class="img-grid">
+              <div class="img-placeholder"><img src="imagens/15.jpeg" alt="Conta pós paga"><div class="caption">Acesse Conta Pós Paga em Itens de Fatura.</div></div>
+              <div class="img-placeholder"><img src="imagens/16.jpeg" alt="Consulta de faturas"><div class="caption">Abra a consulta de faturas do cliente.</div></div>
+              <div class="img-placeholder"><img src="imagens/17.jpeg" alt="Meios de pagamento (canto superior direito)"><div class="caption">Clique em 'Meios de Pagamento' (canto superior direito).</div></div>
+              <div class="img-placeholder"><img src="imagens/18.jpeg" alt="Criar meio de pagamento"><div class="caption">Clique na caixinha com ícone verde e em 'Criar'.</div></div>
+              <div class="img-placeholder"><img src="imagens/19.jpeg" alt="Selecionar banco"><div class="caption">Selecione o banco na lista.</div></div>
+              <div class="img-placeholder"><img src="imagens/20.jpeg" alt="Formulário dados bancários"><div class="caption">Preencha agência, conta e titularidade.</div></div>
+              <div class="img-placeholder"><img src="imagens/21.jpeg" alt="Autorização do cliente"><div class="caption">Confirme autorização do cliente para débito automático.</div></div>
+              <div class="img-placeholder"><img src="imagens/22.jpeg" alt="Salvar débito automático"><div class="caption">Salve e verifique a mensagem de sucesso.</div></div>
+            </div>
+
+            <div class="steps">
+              <strong>Passo a passo (texto):</strong>
+              <ol>
+                <li>Acesse <strong>Itens de Fatura</strong> e selecione <strong>Conta Pós Paga</strong>.</li>
+                <li>Abra a consulta de faturas do cliente.</li>
+                <li>No canto superior direito, clique em <strong>Meios de Pagamento</strong>.</li>
+                <li>Clique na caixinha com ícone verde e selecione <strong>Criar</strong>.</li>
+                <li>Escolha o banco na lista e preencha os dados bancários.</li>
+                <li>Confirme a autorização do cliente quando solicitado.</li>
+                <li>Clique em <strong>Salvar</strong> e verifique a confirmação do sistema.</li>
+              </ol>
+            </div>
+          </div>
+
+          <!-- ALTERAR DATA DE VENCIMENTO -->
+          <hr style="margin:16px 0;border:none;border-top:1px solid #eef4f7">
+          <div>
+            <div class="proc-header">
+              <div>
+                <div class="proc-title">ALTERAR DATA DE VENCIMENTO DA FATURA — <span class="meta">5 imagens</span></div>
+                <div class="meta">Fluxo: Clique no nome do cliente → Ciclo do Cliente → Caixa com '?' → Selecionar vencimento desejado → Salvar</div>
+              </div>
+            </div>
+
+            <div class="img-grid">
+              <div class="img-placeholder"><img src="imagens/23.jpeg" alt="Clicar no nome do cliente"><div class="caption">Clique no nome do cliente para abrir o cadastro.</div></div>
+              <div class="img-placeholder"><img src="imagens/24.jpeg" alt="Ciclo do cliente"><div class="caption">Localize a seção 'Ciclo do Cliente' e o ciclo atual.</div></div>
+              <div class="img-placeholder"><img src="imagens/25.jpeg" alt="Caixinha com interrogação"><div class="caption">Clique na caixinha com '?' para ver opções de vencimento.</div></div>
+              <div class="img-placeholder"><img src="imagens/26.jpeg" alt="Selecionar novo vencimento"><div class="caption">Selecione o novo vencimento desejado.</div></div>
+              <div class="img-placeholder"><img src="imagens/27.jpeg" alt="Salvar alteração de vencimento"><div class="caption">Clique em 'Salvar' para aplicar a nova data.</div></div>
+            </div>
+
+            <div class="steps">
+              <strong>Passo a passo (texto):</strong>
+              <ol>
+                <li>Abra o cadastro do cliente clicando no nome.</li>
+                <li>Na seção <strong>Ciclo do Cliente</strong>, clique no ciclo de vencimento atual.</li>
+                <li>Clique na caixinha com '?' para abrir as opções de vencimento.</li>
+                <li>Selecione o vencimento desejado e confirme.</li>
+                <li>Clique em <strong>Salvar</strong> para aplicar a mudança.</li>
+              </ol>
+            </div>
+          </div>
+
+          <!-- MUDANÇA DE PLANO -->
+          <hr style="margin:16px 0;border:none;border-top:1px solid #eef4f7">
+          <div style="margin-bottom:8px">
+            <div class="proc-header">
+              <div>
+                <div class="proc-title">MUDANÇA DE PLANO / MUDANÇA TOTALIZADA — <span class="meta">4 imagens</span></div>
+                <div class="meta">Fluxo: Visualizar Produtos → Selecionar Produto → Ações → Gerenciador de Pedidos → Trocar Oferta</div>
+              </div>
+            </div>
+
+            <div class="img-grid">
+              <div class="img-placeholder"><img src="imagens/28.jpeg" alt="Visualizar produtos"><div class="caption">Acesse 'Visualizar Produtos'.</div></div>
+              <div class="img-placeholder"><img src="imagens/29.jpeg" alt="Selecionar produto e ações"><div class="caption">Selecione o produto e abra 'Ações'.</div></div>
+              <div class="img-placeholder"><img src="imagens/30.jpeg" alt="Gerenciador de pedidos"><div class="caption">Abra o Gerenciador de Pedidos.</div></div>
+              <div class="img-placeholder"><img src="imagens/31.jpeg" alt="Trocar oferta"><div class="caption">Escolha 'Trocar Oferta' ou 'Troca Totalizada' e confirme.</div></div>
+            </div>
+
+            <div class="steps">
+              <strong>Passo a passo (texto):</strong>
+              <ol>
+                <li>Acesse <strong>Visualizar Produtos</strong> e localize a oferta do cliente.</li>
+                <li>Selecione o produto desejado e clique em <strong>Ações</strong>.</li>
+                <li>Acesse o <strong>Gerenciador de Pedidos</strong> para ver opções de troca.</li>
+                <li>Escolha <strong>Trocar Oferta</strong> (ou Troca Totalizada) e confirme a operação.</li>
+              </ol>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+     
+      
+        <div style="margin-top:12px">
+          <div class="download-row">
+            <a class="btn" href="#" onclick="alert('Faça o download do HTML salvando esta página (Ctrl+S) ou peça que eu gere um .zip com as imagens.')">Salvar HTML</a>
+            <a class="btn btn--ghost" href="#" onclick="alert('Posso gerar o .docx ou .pptx se você enviar as imagens.')">Gerar .docx / .pptx</a>
+          </div>
+        </div>
+
+      
+    </main>
+  </div>
+</body>
+</html>
